@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.name }} - R66shop{% endblock %}
+
+{% block content %}
+<section class="product-detail">
+    <div class="detail-container">
+        <div class="detail-image">
+            {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+            <div class="product-image-placeholder large">🏎️</div>
+            {% endif %}
+        </div>
+        <div class="detail-info">
+            <h1>{{ product.name }}</h1>
+            <span class="product-category-badge">{{ product.get_category_display }}</span>
+            <p class="detail-price">₹{{ product.price }}</p>
+            {% if product.in_stock %}
+            <span class="badge badge-stock">In Stock ✅</span>
+            {% else %}
+            <span class="badge badge-out">Out of Stock ❌</span>
+            {% endif %}
+            <p class="detail-description">{{ product.description }}</p>
+
+            {% if user.is_authenticated %}
+            <div class="detail-actions">
+                <a href="{% url 'edit_product' product.pk %}" class="btn btn-edit">✏️ Edit</a>
+                <a href="{% url 'delete_product' product.pk %}" class="btn btn-delete">🗑️ Delete</a>
+            </div>
+            {% endif %}
+
+            <a href="{% url 'home' %}" class="btn btn-back">← Back to Shop</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

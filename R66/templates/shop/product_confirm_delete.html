@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete {{ product.name }} - R66shop{% endblock %}
+
+{% block content %}
+<section class="form-section">
+    <div class="form-container delete-container">
+        <h1>Delete Product</h1>
+        <div class="delete-warning">
+            <p>⚠️ Are you sure you want to delete <strong>"{{ product.name }}"</strong>?</p>
+            <p>This action cannot be undone!</p>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="delete-actions">
+                <button type="submit" class="btn btn-delete-confirm">Yes, Delete</button>
+                <a href="{% url 'product_detail' product.pk %}" class="btn btn-cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

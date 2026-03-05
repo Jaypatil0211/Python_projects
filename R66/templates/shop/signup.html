@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up - R66shop{% endblock %}
+
+{% block content %}
+<section class="form-section">
+    <div class="form-container auth-container">
+        <h1>🏁 Create Account</h1>
+        <p class="auth-subtitle">Join the R66shop family!</p>
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {% if field.help_text %}
+                <p class="help-text">{{ field.help_text }}</p>
+                {% endif %}
+                {% if field.errors %}
+                <div class="field-errors">
+                    {% for error in field.errors %}
+                    <p class="error-text">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-submit">Sign Up</button>
+        </form>
+        <p class="auth-link">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+    </div>
+</section>
+{% endblock %}

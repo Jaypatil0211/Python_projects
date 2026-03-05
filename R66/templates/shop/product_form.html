@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }} - R66shop{% endblock %}
+
+{% block content %}
+<section class="form-section">
+    <div class="form-container">
+        <h1>{{ title }}</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {% if field.errors %}
+                <div class="field-errors">
+                    {% for error in field.errors %}
+                    <p class="error-text">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-submit">{{ title }}</button>
+        </form>
+        <a href="{% url 'home' %}" class="btn btn-back">← Back to Shop</a>
+    </div>
+</section>
+{% endblock %}
