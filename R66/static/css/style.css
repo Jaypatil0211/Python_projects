@@ -1,9 +1,4 @@
-/* ==========================================
-   R66shop - CSS Stylesheet
-   Theme: Cars Movie (Red, Yellow, Black)
-   ========================================== */
-
-/* ---------- Reset & Base ---------- */
+/* Base */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +19,7 @@ a {
     color: inherit;
 }
 
-/* ---------- Navbar ---------- */
+/* Navbar */
 .navbar {
     background-color: #c0392b;
     padding: 15px 0;
@@ -90,7 +85,7 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ---------- Messages ---------- */
+/* Messages */
 .messages-container {
     max-width: 1200px;
     margin: 15px auto;
@@ -119,7 +114,7 @@ a {
     color: #fff;
 }
 
-/* ---------- Main Content ---------- */
+/* Main Content */
 .main-content {
     flex: 1;
     max-width: 1200px;
@@ -128,7 +123,7 @@ a {
     width: 100%;
 }
 
-/* ---------- Hero Section ---------- */
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 50px 20px;
@@ -151,7 +146,7 @@ a {
     margin: 0 auto;
 }
 
-/* ---------- Products Section ---------- */
+/* Products Section */
 .products-section {
     margin-bottom: 40px;
 }
@@ -169,7 +164,7 @@ a {
     gap: 25px;
 }
 
-/* ---------- Product Card ---------- */
+/* Product Card */
 .product-card {
     background-color: #16213e;
     border-radius: 12px;
@@ -227,7 +222,7 @@ a {
     margin-bottom: 10px;
 }
 
-/* ---------- Badges ---------- */
+/* Badges */
 .badge {
     display: inline-block;
     padding: 4px 12px;
@@ -247,7 +242,7 @@ a {
     color: #fff;
 }
 
-/* ---------- Buttons ---------- */
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -322,7 +317,7 @@ a {
     background-color: #e74c3c;
 }
 
-/* ---------- Product Detail ---------- */
+/* Product Detail */
 .product-detail {
     padding: 20px 0;
 }
@@ -385,7 +380,7 @@ a {
     gap: 10px;
 }
 
-/* ---------- Form Styles ---------- */
+/* Form Styles */
 .form-section {
     display: flex;
     justify-content: center;
@@ -462,7 +457,7 @@ select.form-input {
     margin-top: 4px;
 }
 
-/* ---------- Auth Pages ---------- */
+/* Auth Pages */
 .auth-container {
     text-align: center;
 }
@@ -492,7 +487,7 @@ select.form-input {
     text-decoration: underline;
 }
 
-/* ---------- Delete Confirmation ---------- */
+/* Delete Confirmation */
 .delete-container {
     text-align: center;
 }
@@ -545,7 +540,7 @@ select.form-input {
     background-color: #95a5a6;
 }
 
-/* ---------- No Products ---------- */
+/* No Products */
 .no-products {
     text-align: center;
     padding: 50px;
@@ -563,7 +558,7 @@ select.form-input {
     font-weight: bold;
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 .footer {
     background-color: #0f3460;
     text-align: center;
@@ -572,7 +567,7 @@ select.form-input {
     margin-top: auto;
 }
 
-/* ---------- Responsive ---------- */
+/* Responsive  */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
@@ -599,4 +594,5 @@ select.form-input {
     .delete-actions {
         flex-direction: column;
     }
+
 }
